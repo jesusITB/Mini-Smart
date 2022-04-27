@@ -1,7 +1,7 @@
-# Mini-Smart
-Proyecto enfocado en la administracion y distribucion de productos en las escuelas.
+#Mini-Smart™️
+Este proyecto esta enfocado en la administracion y distribucion de productos en las escuelas y empresas.
 
-Este Producto estara destinado para tener un mayor control del material escolar que sera presatado a una cierta cantidad de alumno, para cada estudiante que se quiera unir tiene que darse de alta por un administrador.
+Consiste en una raspberry pi 4 (Sirve cualquir modelo de la 4) junto a un [lector RFID](https://www.amazon.es/Mifare-Tarjeta-Antena-lector-tarjetas/dp/B06X9PZSQN/ref=sr_1_6?__mk_es_ES=ÅMÅŽÕÑ&crid=JWRUNI69NF3Q&keywords=rc522&qid=1651066055&sprefix=rc+522%2Caps%2C83&sr=8-6) (Sirve cualquiera, no hace falta que sea este especificamente)
 
 Este usuario podra recojer objetos y hasta el dia de su uso que podra ir a regresarlo y devolverlo al sistema general.
 

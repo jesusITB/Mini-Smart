@@ -18,7 +18,7 @@ Gracias a una **base de datos** la cual estara en la raspberry, almacenara los d
 El programa consiste en tres tipos de usuarios, en el caso de un instutito serian: `Alumno`, `Profe`, `Admin`, pero en caso de una empresa seria: `User`, `Previligiados`, `Admin`.
 
 Para conectar el lector RFID-RC522 a la raspberry pi 4 sera necesario conectar los pins de esta manera:
-| Pines Raspberry | Pines lector RFID-RC522 |
+| Pines de la Raspberry | Pines del lector RFID-RC522 |
 | ------------- | ------------- |
 | [17] Rojo - 3v3 Power | [8] 3.3V |
 | [18] Naranja - GPIO 23 / SPI3 CE1 N | [5] IRQ |

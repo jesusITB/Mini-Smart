@@ -30,12 +30,6 @@ def VentanaAdmin():
     FrameBajo.pack (side='top')
     FrameBajo.config(width=1980, height=520)
 
-
-    img = ImageTk.PhotoImage(file='LogoItb.png')  
-    Ibuto = Button(FrameBajo, text = 'Click Me !', image = img,width=40, height=55)
-    Ibuto.place(y=100, x=990)
-
-
     #https://recursospython.com/guias-y-manuales/boton-button-en-tkinter/
     boton1 = Button (VentAnd,text='prueba',width=25, height=15)
     boton1.place(x=100, y=650)
@@ -50,34 +44,6 @@ def VentanaAdmin():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 VentanaPrincipal = Tk() 
 VentanaPrincipal.title('MiniSmart')
 
@@ -89,15 +55,11 @@ Frame1.config(width="1100", height="1920")
 boton = Frame (Frame1,bg='red')
 Button (text='aque', fg='red',command=Validar_tarjeta).pack(side='top')
 
-
 #Frame 2
 Frame2 = LabelFrame (VentanaPrincipal, bg='aqua')
 Frame2.pack()
 Frame2.config(width="1000", height="1920")
 Frame2.config (cursor="spider")
 Button (Frame2,text='aqui', fg='red',command=VentanaPrincipal.destroy).pack(side='top', expand=True)
-
-
-
 
 VentanaPrincipal.mainloop()

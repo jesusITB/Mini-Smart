@@ -29,3 +29,5 @@ Gracias a una **base de datos** la cual estara en la raspberry, almacenara los d
 
 El programa consiste en tres tipos de usuarios, en el caso de un instutito serian: **`Alumno`**, **`Profe`**, **`Admin`**, pero en caso de una empresa seria: **`User`**, **`Previligiados`**, **`Admin`**.
 
+import RPi.GPIO as GPIO
+from mfrc522 import SimpleMFRC522

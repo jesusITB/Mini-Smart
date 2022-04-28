@@ -27,9 +27,10 @@ Luego, para tener los productos controlados se puede utilizar estas **pegatinas 
  
 Gracias a una **base de datos** la cual estara en la raspberry, almacenara los datos de los **productos** ademas de los **usuarios creados** y los vinculara para hacer una lista de la gente a la que se le han prestados cosas, habra dos tipos de base de datos, una para empresas y otra para [centros educativos](Layout_Institutos.sql).
 
-El programa consiste en tres tipos de usuarios, en el caso de un instutito serian: **`Alumno`**, **`Profe`**, **`Admin`**, pero en caso de una empresa seria: **`User`**, **`Previligiados`**, **`Admin`**.
-
 Las librerias usadas son:
+
 - from tkinter import *
 - import RPi.GPIO as GPIO
 - from mfrc522 import SimpleMFRC522
+
+El programa consiste en tres tipos de usuarios, en el caso de un instutito serian: **`Alumno`**, **`Profe`**, **`Admin`**, pero en caso de una empresa seria: **`User`**, **`Previligiados`**, **`Admin`**.

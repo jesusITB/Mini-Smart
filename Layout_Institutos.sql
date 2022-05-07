@@ -10,12 +10,14 @@ USE DB_layout;
 #Tablas sin relacion
 CREATE TABLE IF NOT EXISTS Usuarios( #Tabla la cual almacena a los usuarios.
 	usu_correo VARCHAR(320) NOT NULL, #Correo electrónico de la persona.
+    usu_id BIGINT NOT NULL, #Id de la tarjeta nfc a la cual se va a vincular esta persona.
     usu_nombre VARCHAR(45) NOT NULL, #Nombre de la persona.
     usu_apellido VARCHAR(45) NOT NULL, #Apellido de la persona.
     usu_tipo ENUM('Alumno', 'Profe', 'Administrador') NOT NULL, #Tipo de usuario y permisos que tendra la persona.
-    usu_clase ENUM('NULL', 'SMX1A', 'SMX1B', 'SMX1C', 'SMX1D', 'SMX1E', 'SMX1F', 'SMX2A', 'SMX2B', 'SMX2C', 'SMX2E') NOT NULL, #Clase a la cual pertenece la persona, si es profe o admin sera NULL, aqui se podria poner las clases que quieras.
+    usu_clase ENUM('NULL', 'SMX1A', 'SMX1B', 'SMX1C', 'SMX1D', 'SMX1E', 'SMX1F', 'SMX2A', 'SMX2B', 'SMX2C', 'SMX2E', 'ASIXc1B', 'A3Dm1A', 'DAWe1A', 'DAMr1A', 'DAMi1A', 'DAMv1A', 'ASIXc2A', 'ASIXc2B', 'DAWe2A', 'DAMr2A', 'DAMi2A', 'DAMv2A', 'MMEIA', 'MMEIB', 'BATXd1A') NOT NULL, #Clase a la cual pertenece la persona, si es profe o otra cosa que no sea alumno sera NULL.
     PRIMARY KEY (usu_correo) 
 );
+
 
 CREATE TABLE IF NOT EXISTS producto( #Tabla en la cual se guardan los productos del almacén.
 	pro_id INT NOT NULL AUTO_INCREMENT, #Id del producto para poder utilizarlo en la tabla prestamo.

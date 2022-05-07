@@ -1,7 +1,7 @@
 #Pruebas
-INSERT INTO Usuarios (usu_correo, usu_nombre, usu_apellido, usu_tipo, usu_clase) VALUES
-('Prueba@gmail.com', 'Francisco', 'Garcia', 'Administrador', 'SMX2B'),
-('Prueba2@gmail.com', 'Jesus', 'Gomez', 'Administrador', 'SMX2B');
+INSERT INTO Usuarios (usu_correo, usu_id, usu_nombre, usu_apellido, usu_tipo, usu_clase) VALUES
+('Prueba@gmail.com', '253300243202', 'Francisco', 'Garcia', 'Administrador', 'SMX2B'),
+('Prueba2@gmail.com', '38589802968', 'Jesus', 'Gomez', 'Administrador', 'SMX2B');
 
 INSERT INTO Producto (pro_nombre, pro_descripcion, pro_familia, pro_estado, pro_fecha_compra, pro_precio, pro_solicitante_compra) VALUES
 ('Raspberry pi 4 B', 'Sin cargador', 'RASPBERRY', 'EN PERFECTO ESTADO', '2022-01-05', '101.99', 'Fernando Rivero'),

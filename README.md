@@ -25,7 +25,7 @@ Luego, para tener los productos controlados se puede utilizar estas **pegatinas 
 
 ![5157UyrS4jL _AC_SL1339_ (1)](https://user-images.githubusercontent.com/101580554/165537854-476a635f-7f34-4acb-9cd9-9bf136c8835e.jpg)
  
-Gracias a una **base de datos** la cual estara en la raspberry, almacenara los datos de los **productos** ademas de los **usuarios creados** y los vinculara para hacer una lista de la gente a la que se le han prestados cosas, habra dos tipos de base de datos, una para empresas y otra para [centros educativos](Layout_Institutos.sql).
+Gracias a una **base de datos** la cual estara en la raspberry, almacenara los datos de los **productos** ademas de los **usuarios creados** y los vinculara para hacer una lista de la gente a la que se le han prestados cosas, habra dos tipos de base de datos, una para [empresas](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Empresas.sql) y otra para [centros educativos](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Institutos.sql).
 
 Las librerias usadas son:
 

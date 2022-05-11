@@ -1,25 +1,21 @@
-#Comando de pruebas
-DROP DATABASE IF EXISTS DB_layout;
-
 #Crear base de datos
-CREATE DATABASE IF NOT EXISTS DB_layout;
+CREATE DATABASE IF NOT EXISTS DB_layout_institutos;
 
 #Usar la base de datos
-USE DB_layout;
+USE DB_layout_institutos;
 
 #Tablas sin relacion
 CREATE TABLE IF NOT EXISTS Usuarios( #Tabla la cual almacena a los usuarios.
 	usu_correo VARCHAR(320) NOT NULL, #Correo electrónico de la persona.
-    usu_id BIGINT NOT NULL, #Id de la tarjeta nfc a la cual se va a vincular esta persona.
+    usu_id BIGINT NOT NULL, #Id de la tarjeta nfc
     usu_nombre VARCHAR(45) NOT NULL, #Nombre de la persona.
     usu_apellido VARCHAR(45) NOT NULL, #Apellido de la persona.
     usu_tipo ENUM('Alumno', 'Profe', 'Administrador') NOT NULL, #Tipo de usuario y permisos que tendra la persona.
-    usu_clase ENUM('NULL', 'SMX1A', 'SMX1B', 'SMX1C', 'SMX1D', 'SMX1E', 'SMX1F', 'SMX2A', 'SMX2B', 'SMX2C', 'SMX2E', 'ASIXc1B', 'A3Dm1A', 'DAWe1A', 'DAMr1A', 'DAMi1A', 'DAMv1A', 'ASIXc2A', 'ASIXc2B', 'DAWe2A', 'DAMr2A', 'DAMi2A', 'DAMv2A', 'MMEIA', 'MMEIB', 'BATXd1A') NOT NULL, #Clase a la cual pertenece la persona, si es profe o otra cosa que no sea alumno sera NULL.
+    usu_clase ENUM('NULL', 'SMX1A', 'SMX1B', 'SMX1C', 'SMX1D', 'SMX1E', 'SMX1F', 'SMX2A', 'SMX2B', 'SMX2C', 'SMX2E', 'ASIXc1B', 'A3Dm1A', 'DAWe1A', 'DAMr1A', 'DAMi1A', 'DAMv1A', 'ASIXc2A', 'ASIXc2B', 'DAWe2A', 'DAMr2A', 'DAMi2A', 'DAMv2A', 'MMEIA', 'MMEIB', 'BATXd1A') NOT NULL, #Clase a la cual pertenece la persona, si es profe o admin sera NULL.
     PRIMARY KEY (usu_correo) 
 );
 
-
-CREATE TABLE IF NOT EXISTS producto( #Tabla en la cual se guardan los productos del almacén.
+CREATE TABLE IF NOT EXISTS Producto( #Tabla en la cual se guardan los productos del almacén.
 	pro_id INT NOT NULL AUTO_INCREMENT, #Id del producto para poder utilizarlo en la tabla prestamo.
     pro_nombre VARCHAR(45) NOT NULL, #Nombre del producto, ej: Raspberry pi 4, Oculus quest 2.
     pro_descripcion VARCHAR(45) NOT NULL, #Aqui se especifica si trae cargador, gamepad, etc...
@@ -41,5 +37,5 @@ CREATE TABLE IF NOT EXISTS Prestamo( #Tabla para guardar los presamos realizados
     pre_notas VARCHAR(420) NULL, #Notas sobre el prestamo, ej: se ha devuelto roto.
     PRIMARY KEY (pre_id), 
     FOREIGN KEY (usu_correo) REFERENCES Usuarios(usu_correo) ON UPDATE CASCADE, #vinculacion de la tabla Usuarios con esta, ademas cuenta con el ON UPDATE CASCADE que sirve para que cuando cambiemos algo en las otras tablas se cambie en esta.
-    FOREIGN KEY (pro_id) REFERENCES producto(pro_id) ON UPDATE CASCADE  #vinculacion de la tabla Producto con esta, ademas cuenta con el ON UPDATE CASCADE que sirve para que cuando cambiemos algo en las otras tablas se cambie en esta.
+    FOREIGN KEY (pro_id) REFERENCES Producto(pro_id) ON UPDATE CASCADE  #vinculacion de la tabla Producto con esta, ademas cuenta con el ON UPDATE CASCADE que sirve para que cuando cambiemos algo en las otras tablas se cambie en esta.
 );

@@ -27,10 +27,57 @@ Luego, para tener los productos controlados se puede utilizar estas **pegatinas 
  
 Gracias a una **base de datos** la cual estara en la raspberry, almacenara los datos de los **productos** ademas de los **usuarios creados** y los vinculara para hacer una lista de la gente a la que se le han prestados cosas, habra dos tipos de base de datos, una para [empresas](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Empresas.sql) y otra para [centros educativos](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Institutos.sql).
 
+## Configurar base de datos
+Lo primero que tenemos que hacer es configurar la base de datos, lo primero de todo que tenemos que hacer es instalar MariaDB, para ello hacemos:
+```
+sudo apt update & sudo apt upgrade
+```
+Ahora, una vez que hemos actualizado el sistema instalamos el paquete:
+```
+sudo apt install mariadb-server
+```
+Al descargarse el servicio de MariaDB se inicia automaticamente, podemos comprobarlo con:
+```
+sudo systemctl status mariadb
+```
+Si no esta iniciado solo tenemos que hacer el siguente comando para inciar el servicio:
+```
+sudo systemctl start mariadb
+```
+
+Una vez esta instalado MariaDB tenemos que entrar a la base de datos como administrador, para hacerlo con poner **`sudo mariadb`** bastaria, una vez estamos dentro tenemos que crear un usuario nuevo y darle permisos, el usuario de nuestra raspberry se llama pi (como la mayoria), asi que este ejemplo lo haremos con ese usuario.
+para crearlo hacemos:
+```
+CREATE USER 'pi'@'localhost' IDENTIFIED BY '1234';
+```
+para este ejemplo he puesto una contraseña facil, pero se podria poner cualquiera que tu quisieras.
+
+Para que ese usuario que acabmos de crear funcione tenemos que darle permisos, para darle permisos tenemos que poner:
+```
+GRANT ALL PRIVILEGES ON * . * TO 'pi'@'localhost';
+```
+
+Ahora, para que los cambios que acabamos de hacer funcionen tenemos que volver a cargar los privilegios con:
+```
+FLUSH PRIVILEGES;
+```
+
+
+
+
+
+
+
+
+
 Las librerias usadas son:
 
 - from tkinter import *
 - import RPi.GPIO as GPIO
 - from mfrc522 import SimpleMFRC522
+- from PIL import ImageTk, Image
 
 El programa consiste en tres tipos de usuarios, en el caso de un instutito serian: **`Alumno`**, **`Profe`**, **`Admin`**, pero en caso de una empresa seria: **`User`**, **`Previligiados`**, **`Admin`**.
+
+Lo primero que se ve al iniciar el programa es el **menú principal**, el boton que esta a la derecha es para empezar el escaneo de tarjetas.
+![Menu principal](https://user-images.githubusercontent.com/101580554/167872099-9862923a-604a-4c2a-b04d-d5c184e68d3a.png)

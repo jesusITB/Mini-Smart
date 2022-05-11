@@ -1,6 +1,3 @@
-#Comando de pruebas
-DROP DATABASE IF EXISTS DB_layout_empresas;
-
 #Crear base de datos
 CREATE DATABASE IF NOT EXISTS DB_layout_empresas;
 
@@ -14,7 +11,7 @@ CREATE TABLE IF NOT EXISTS Usuarios( #Tabla la cual almacena a los usuarios.
     usu_nombre VARCHAR(45) NOT NULL, #Nombre de la persona.
     usu_apellido VARCHAR(45) NOT NULL, #Apellido de la persona.
     usu_tipo ENUM('Alumno', 'Profe', 'Administrador') NOT NULL, #Tipo de usuario y permisos que tendra la persona.
-    usu_departmento ENUM('Ventas','Produccion','Marketing','Desarrollo','I+D','Montaje','Administrativo') NOT NULL, #departamento al cual pertenece la persona.
+    usu_departmento ENUM('Ventas','Produccion','Marketing','Desarrollo','I+D','Montaje','Administrativo') NOT NULL, #departamento al cual pertenece la persona, se puede añadir cualquiera en base a las necesidades de la empresa.
     PRIMARY KEY (usu_correo) 
 );
 

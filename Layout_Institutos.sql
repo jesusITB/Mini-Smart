@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS Producto( #Tabla en la cual se guardan los productos 
 );
 
 #Tabla master
-CREATE TABLE IF NOT EXISTS Prestamo( #Tabla para guardar los presamos realizados.
+CREATE TABLE IF NOT EXISTS Prestamo( #Tabla para guardar los préstamos realizados.
 	pre_id INT NOT NULL AUTO_INCREMENT, #Id de la tabla producto para poder tener los prestamos organizados.
     usu_correo VARCHAR(320) NOT NULL, #Correo electrónico de la persona, el cual esta vinculado con la tabla de Usuarios.
     pro_id INT NOT NULL, #Id del producto, este campo esta vinculado con la tabla Prestamo.

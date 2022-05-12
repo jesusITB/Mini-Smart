@@ -45,7 +45,7 @@ Si no esta iniciado solo tenemos que hacer el siguente comando para inciar el se
 sudo systemctl start mariadb
 ```
 
-Una vez esta instalado MariaDB tenemos que entrar a la base de datos como administrador, para hacerlo con poner **`sudo mariadb`** bastaria, una vez estamos dentro tenemos que crear un usuario nuevo y darle permisos, el usuario de nuestra raspberry se llama pi (como la mayoria), asi que este ejemplo lo haremos con ese usuario.
+Una vez esta instalado MariaDB tenemos que entrar a la base de datos como administrador, para hacerlo con poner **`sudo mariadb`** o **`sudo mysql`** bastaria, una vez estamos dentro tenemos que crear un usuario nuevo y darle permisos, el usuario de nuestra raspberry se llama pi (como la mayoria), asi que este ejemplo lo haremos con ese usuario.
 para crearlo hacemos:
 ```
 CREATE USER 'pi'@'localhost' IDENTIFIED BY '1234';

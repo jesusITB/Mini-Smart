@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS Producto( #Tabla en la cual se guardan los productos 
     pro_descripcion VARCHAR(45) NOT NULL, #Aqui se especifica si trae cargador, gamepad, etc...
     pro_familia VARCHAR(45) NOT NULL, #Tipo de producto, ej; Raspberry, Gafas VR, Arduino.
     pro_estado ENUM('EN PERFECTO ESTADO', 'EN BUEN ESTADO', 'EN ESTADO NORMAL', 'EN MAL ESTADO') NOT NULL, #Estado del producto.
-    pro_fecha_compra DATE NOT NULL, #Fecha en la que se compro el producto, sirve para poder tener una guia de como de util a sido el producto.
+    pro_fecha_compra DATE NOT NULL, #Fecha en la que se compró el producto, sirve para poder tener una guía de cómo de útil ha sido el producto.
     pro_precio FLOAT NOT NULL, #Precio de compra del producto.
     pro_solicitante_compra VARCHAR(45) NOT NULL, #Persona que ha solicitado la compra del producto.
     PRIMARY KEY (pro_id)

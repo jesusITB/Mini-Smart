@@ -61,11 +61,10 @@ Ahora, para que los cambios que acabamos de hacer funcionen, tenemos que volver 
 ```
 FLUSH PRIVILEGES;
 ```
+## Añadir el layout que prefiramos a la DB
+Ahora viene lo más fácil, ya que tenemos las plantillas ya creadas, si se quiere modificar algo de ellas se puede, pero vas a tener que estar seguro del cambio y acordarte de cambiarlo en el código, solo recomiendo hacerlo si eres un usuario experimentado en MySQL y en Python, pero bueno, siempre podemos elegir o la de [Empresas](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Empresas.sql) o la de [Institutos](https://github.com/jesusITB/Mini-Smart/blob/main/Layout_Institutos.sql).
 
-
-
-
-
+Ahora lo que tenemos que hacer es volver a iniciar sesion en MariaDB con **'sudo MariaDB'** o **'sudo MySQL'** y entraremos como administrador, para añadir cualquiera de los dos layouts es tan facil como copia y pegar todo el codigo en el shell de MariaDB,
 
 
 

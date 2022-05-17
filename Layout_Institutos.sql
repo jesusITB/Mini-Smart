@@ -7,7 +7,7 @@ USE DB_layout_institutos;
 #Tablas sin relacion
 CREATE TABLE IF NOT EXISTS Usuarios( #Tabla la cual almacena a los usuarios.
 	usu_correo VARCHAR(320) NOT NULL, #Correo electrónico de la persona.
-    usu_id BIGINT NOT NULL, #Id de la tarjeta nfc
+    usu_id BIGINT NOT NULL, #Id de la tarjeta nfc.
     usu_nombre VARCHAR(45) NOT NULL, #Nombre de la persona.
     usu_apellido VARCHAR(45) NOT NULL, #Apellido de la persona.
     usu_tipo ENUM('Alumno', 'Profe', 'Administrador') NOT NULL, #Tipo de usuario y permisos que tendrá la persona.

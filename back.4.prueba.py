@@ -1,6 +1,5 @@
 from tkinter import CENTER, TOP, LabelFrame, StringVar, Tk, Label, Button, Entry, Frame, Toplevel, ttk, PhotoImage, messagebox
 from functools import partial
-from typing_extensions import IntVar
 from PIL import ImageTk, Image
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
@@ -180,7 +179,7 @@ def MenuAlta(Nombre_Usuario,conexion):
     ImgNombre = PhotoImage(file='image/nombre.png')
     Label(VentAlt,image=ImgNombre,bg='red').place(x=110,y=610)
     Label(VentAlt,text='nombre').place(x=150,y=580)
-    Entry(VentAlt,textvariable=nombre).place(x=100,y=750)
+    Entry(VentAlt,textvariable=nombre).place(x=80,y=750)
 
     ImgApellido = PhotoImage(file='image/apellido.png')
     Label(VentAlt,image=ImgApellido,bg='red').place(x=460,y=610)
@@ -414,7 +413,7 @@ def VentanaProf(Nombre_Usuario,conexion):
     #label
     Label(VentPro,image=imagentt,width=250,height=250,bg='#e7dbcb').place(x=835, y=150) 
     Label(VentPro,text='Administrador',font=("Consolas", 21),bg='#e7dbcb').place(x=850,y=400)
-    Label (VentPro,text=Nombre_Usuario,font=("Consolas", 20),bg='red',fg='white').pack()
+    Label (VentPro,text=Nombre_Usuario,font=("Consolas", 20),bg='green',fg='white').pack()
 
     
     #boton1
@@ -476,7 +475,7 @@ def MenuAltaProf(Nombre_Usuario,conexion):
     FrameAlt.pack (side='top')
     FrameAlt.config(width=1980, height=480,bg='#e7dbcb')
 
-    Label (VentAltP,text=Nombre_Usuario,font=("Consolas", 20),bg='red',fg='white').pack()
+    Label (VentAltP,text=Nombre_Usuario,font=("Consolas", 20),bg='green',fg='white').pack()
     Label(VentAltP,image=imagentt,width=250,height=250,bg='#e7dbcb').place(x=835, y=150) 
     Label(VentAltP,text='Usuario Alta',font=("Consolas", 21),bg='#e7dbcb').place(x=850,y=400)
 
@@ -489,28 +488,28 @@ def MenuAltaProf(Nombre_Usuario,conexion):
     clase = StringVar()
 
     ImgNombre = PhotoImage(file='image/nombre.png')
-    Label(VentAltP,image=ImgNombre,bg='red').place(x=110,y=610)
+    Label(VentAltP,image=ImgNombre,bg='green').place(x=110,y=610)
     Label(VentAltP,text='nombre').place(x=150,y=580)
     Entry(VentAltP,textvariable=nombre).place(x=100,y=750)
 
     ImgApellido = PhotoImage(file='image/apellido.png')
-    Label(VentAltP,image=ImgApellido,bg='red').place(x=460,y=610)
+    Label(VentAltP,image=ImgApellido,bg='green').place(x=460,y=610)
     Label(VentAltP,text='apellido').place(x=500,y=580)
     Entry(VentAltP,textvariable=apellido).place(x=450,y=750)
 
     ImgCorreo = PhotoImage(file='image/correo.png')
-    Label(VentAltP,image=ImgCorreo,bg='red').place(x=800,y=610)
+    Label(VentAltP,image=ImgCorreo,bg='green').place(x=800,y=610)
     Label(VentAltP,text='correo').place(x=850,y=580)
     Entry(VentAltP,textvariable=correo).place(x=785,y=750)
 ###########################################
 
     Imgtipo = PhotoImage(file='image/tipo.png')
-    Label(VentAltP,image=Imgtipo,bg='red').place(x=100,y=850)
+    Label(VentAltP,image=Imgtipo,bg='green').place(x=100,y=850)
     Label(VentAltP,text='tipo').place(x=150,y=800)
     ttk.Combobox (VentAltP,textvariable=tipo,state="readonly",values=[' ','Alumno', 'Profe', 'Administrador''']).place(x=80,y=1000)
 
     ImgClase = PhotoImage(file='image/clase.png')
-    Label(VentAltP,image=ImgClase,bg='red').place(x=450,y=850)
+    Label(VentAltP,image=ImgClase,bg='green').place(x=450,y=850)
     Label(VentAltP,text='clase').place(x=500,y=800)
     ttk.Combobox (
         VentAltP,
@@ -549,14 +548,14 @@ def MenuAltaProduct(Nombre_Usuario,conexion):
     VentAltProducct_P=Toplevel()
     VentAltProducct_P.title('Smart-tacker')
     VentAltProducct_P.attributes("-fullscreen", True)
-    VentAltProducct_P.config(bg='red') #COLOR
+    VentAltProducct_P.config(bg='green') #COLOR
 
     #frame 
     FrameAltProduct = LabelFrame(VentAltProducct_P)
     FrameAltProduct.pack (side='top')
     FrameAltProduct.config(width=1980, height=480,bg='#e7dbcb')
 
-    Label (VentAltProducct_P,text=Nombre_Usuario,font=("Consolas", 20),bg='red',fg='white').pack()
+    Label (VentAltProducct_P,text=Nombre_Usuario,font=("Consolas", 20),bg='green',fg='white').pack()
     Label(VentAltProducct_P,image=imagentt,width=250,height=250,bg='#e7dbcb').place(x=835, y=150) 
     Label(VentAltProducct_P,text='Producto Alta',font=("Consolas", 21),bg='#e7dbcb').place(x=850,y=400)
     
@@ -569,28 +568,28 @@ def MenuAltaProduct(Nombre_Usuario,conexion):
     solicitante = StringVar()
 
     ImgNombre = PhotoImage(file='image/nombre.png')
-    Label(VentAltProducct_P,image=ImgNombre,bg='red').place(x=110,y=610)
+    Label(VentAltProducct_P,image=ImgNombre,bg='green').place(x=110,y=610)
     Label(VentAltProducct_P,text='Nombre').place(x=150,y=580)
     Entry(VentAltProducct_P,textvariable=nombre).place(x=100,y=750)
 
     ImgEstado = PhotoImage(file='image/estado.png')
-    Label(VentAltProducct_P,image=ImgEstado,bg='red').place(x=450,y=610)
+    Label(VentAltProducct_P,image=ImgEstado,bg='green').place(x=450,y=610)
     Label(VentAltProducct_P,text='Estado').place(x=490,y=580)
     ttk.Combobox(VentAltProducct_P,textvariable=estado,values=['','EN PERFECTO ESTADO','EN BUEN ESTADO','EN ESTADO NORMAL','EN MAL ESTADO' ,]).place(x=420,y=750)
 
 ##########################################################################
     ImgPrecio = PhotoImage(file='image/precio.png')
-    Label(VentAltProducct_P,image=ImgPrecio,bg='red').place(x=110,y=850)
+    Label(VentAltProducct_P,image=ImgPrecio,bg='green').place(x=110,y=850)
     Label(VentAltProducct_P,text='precio').place(x=150,y=800)
     Entry(VentAltProducct_P,textvariable=precio).place(x=90,y=1000)
     
     ImgSolicitante = PhotoImage(file='image/solicitante.png')
-    Label(VentAltProducct_P,image=ImgSolicitante,bg='red').place(x=440,y=850)
+    Label(VentAltProducct_P,image=ImgSolicitante,bg='green').place(x=440,y=850)
     Label (VentAltProducct_P,text='Solicitante').place(x=470,y=800)
     Entry(VentAltProducct_P,textvariable=solicitante).place(x=420,y=1000)
 
     ImgTipo = PhotoImage(file='image/tipo_Producto.png')
-    Label(VentAltProducct_P,image=ImgTipo,bg='red').place(x=770,y=850)
+    Label(VentAltProducct_P,image=ImgTipo,bg='green').place(x=770,y=850)
     Label(VentAltProducct_P,text='tipo').place(x=810,y=800)
     ttk.Combobox (
         VentAltProducct_P,
@@ -637,7 +636,7 @@ def MenuListaDB_profe(Nombre_Usuario,conexion):
     VentListP=Toplevel()
     VentListP.title('Smart-tacker')
     VentListP.attributes("-fullscreen", True)
-    VentListP.config(bg='red') #COLOR
+    VentListP.config(bg='green') #COLOR
 
     #frame 
     FrameAlt = LabelFrame(VentListP)
@@ -648,7 +647,7 @@ def MenuListaDB_profe(Nombre_Usuario,conexion):
     FrameAzul = Label(VentListP, width=40, height=100, bg='blue')
     FrameAzul.place(x=0,y=0)
 
-    Label(VentListP,text=Nombre_Usuario,font=("Consolas", 20),bg='red',fg='white').place(x=1040,y=300)
+    Label(VentListP,text=Nombre_Usuario,font=("Consolas", 20),bg='green',fg='white').place(x=1040,y=300)
     Label(VentListP,image=imagenMini,width=200,height=200,bg='#e7dbcb').place(x=1050,y=50) 
     Label(VentListP,text='Lista',font=("Consolas", 17),bg='#e7dbcb').place(x=1115,y=250)
 
@@ -702,7 +701,6 @@ def MenuListaDB_profe(Nombre_Usuario,conexion):
     Button (VentListP,text='X',command=VentListP.destroy,width=3, height=2).place(x=1860,y=4)
 
     VentListP.mainloop()
-
 
 #########################################################################################################
 

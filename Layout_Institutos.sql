@@ -1,3 +1,6 @@
+#Comando para pruebas.
+DROP DATABASE IF EXISTS DB_layout_institutos;
+
 #Crear base de datos
 CREATE DATABASE IF NOT EXISTS DB_layout_institutos;
 
@@ -20,7 +23,7 @@ CREATE TABLE IF NOT EXISTS Producto( #Tabla en la cual se guardan los productos 
     pro_nombre VARCHAR(45) NOT NULL, #Nombre del producto, ej: Raspberry pi 4, Oculus quest 2.
     pro_descripcion VARCHAR(45) NOT NULL, #Aquí se especifica si trae cargador, gamepad, etc...
     pro_familia VARCHAR(45) NOT NULL, #Tipo de producto, ej; Raspberry, Gafas VR, Arduino.
-    pro_estado ENUM('EN PERFECTO ESTADO', 'EN BUEN ESTADO', 'EN ESTADO NORMAL', 'EN MAL ESTADO') NOT NULL, #Estado del producto.
+    pro_estado ENUM('EN PERFECTO ESTADO', 'EN BUEN ESTADO', 'EN MAL ESTADO') NOT NULL, #Estado del producto.
     pro_fecha_compra DATE NOT NULL, #Fecha en la que se compró el producto, sirve para poder tener una guía de cómo de útil ha sido el producto.
     pro_precio FLOAT NOT NULL, #Precio de compra del producto.
     pro_solicitante_compra VARCHAR(45) NOT NULL, #Persona que ha solicitado la compra del producto.
@@ -31,7 +34,7 @@ CREATE TABLE IF NOT EXISTS Producto( #Tabla en la cual se guardan los productos 
 CREATE TABLE IF NOT EXISTS Prestamo( #Tabla para guardar los préstamos realizados.
 	pre_id INT NOT NULL AUTO_INCREMENT, #Id de la tabla producto para poder tener los préstamos organizados.
     usu_correo VARCHAR(320) NOT NULL, #Correo electrónico de la persona, el cual está vinculado con la tabla de Usuarios.
-    pro_id INT NOT NULL, #Id del producto, este campo está vinculado con la tabla Préstamo.
+    pro_id BIGINT NOT NULL, #Id del producto, este campo está vinculado con la tabla Préstamo.
     pre_fecha_prestamo DATE NOT NULL, #Fecha del dia del préstamo.
     pre_fecha_devolucion DATE, #fecha del dia que se devuelve el producto
     pre_notas VARCHAR(420) NULL, #Notas sobre el préstamo, ej: se ha devuelto roto.
